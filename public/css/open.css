@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.Banner{
+    display: flex;
+    /* width:1000; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ContainerOpen{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+/* Inicio de estilização do Balão de fala*/
+
+.balao{
+    display: inline-block;
+    justify-content: center;
+    padding:20px;
+    border: 1px solid white;
+    border-radius: 45px;
+    margin-bottom: 25px;
+    position:relative;
+    height:50px;
+}
+
+.balao::after{
+    content:"";
+    width:20px;
+    height:20px;
+    display:block;
+    border: 2px solid;
+    background-color: black;
+    border-color: transparent white white transparent;
+    transform: rotate(45deg);
+    left: 70%;
+    top: 85%;
+    position:absolute;
+}
+
+.balao p{
+    color:white;
+    text-align: justify;  
+}
+
+.balao p::before{
+    content:'';
+    color:white;
+}
+
+@keyframes palavras {
+    0%, 20%{
+        content:'';
+    }
+}
+
+/* fim da estilização do balão de fala */
+
+.Banner .imagens{
+    display: flex;
+}
+
+img {
+    width: 400px;
+    /* padding-top: 15%; */
+    padding-bottom: 15%;
+}
