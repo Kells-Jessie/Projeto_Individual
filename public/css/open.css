@@ -54,18 +54,32 @@ body{
     text-align: justify;  
 }
 
-.balao p::before{
-    content:'';
-    color:white;
+/* fim da estilização do balão de fala */
+
+/* Inicio Animação digitando */
+
+.banner .fala_Totoro{
+    width: 234px;
+    animation: digitando 3s steps(25), blink .4s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
 }
 
-@keyframes palavras {
-    0%, 20%{
-        content:'';
+@keyframes digitando{
+    from{
+        width:0
+    }
+
+}
+
+@keyframes blink{
+    40%{
+        border-color: rgb(26, 5, 5);
     }
 }
 
-/* fim da estilização do balão de fala */
+/* Fim Animação digitando */
 
 .Banner .imagens{
     display: flex;

@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link rel="icon" href="assets/icon/calicifer_logo.gif">
-    <link rel="stylesheet" href="open.css">
+    <link rel="icon" href="assets/imgs/giphy.gif">
+    <link rel="stylesheet" href="css/open.css">
 </head>
 <body>
     <div class="Banner">
-        <div class="ContainerOpen">
-            <div class="balao">
-                <p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p>
+        <div class="ContainerOpen" id="div_container">
+            <div id="narracao">
+            <!-- <div id="mostrarFala" class="balao">
+                <div id="falaTotoro" class="fala_Totoro">
+                    <p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p></div>
+            </div> -->
             </div>
-            <img id="totoroCentro" onclick="mostrarDialogo()" src="assets/imgs/giphy.gif">
+            <img id="totoroCentro" onclick="mostrarDialogo()" src="assets/imgs/totoro_folho.gif">
         </div>
     </div>
     
 </body>
 </html>
-<!-- <script>
+<script>
+    var clique = Number(totoroCentro.innerHTML);
     function mostrarDialogo() {
 
+        narracao.innerHTML = `<div id="mostrarFala" class="balao">
+                <div id="falaTotoro" class="fala_Totoro">
+                    <p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p>
+                    </div>
+            </div>`;
+
+            falaTotoro.innerHTML = '';
+
+        for(clique = 0; clique < 7; clique += 1){
+            if(clique == 1){
+                falaTotoro.innerHTML = `<p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p>`;
+            }
+    
+        }
+
     }
-</script> -->
+</script>
