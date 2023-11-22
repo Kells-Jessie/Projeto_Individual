@@ -1,54 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link rel="icon" href="assets/imgs/giphy.gif">
+    <link rel="icon" href="assets/icon/calicifer_logo.gif">
     <link rel="stylesheet" href="css/open.css">
 </head>
 <body>
-    <div class="Banner">
-        <div class="ContainerOpen" id="div_container">
-            <div id="narracao" class="narracao">
-            </div>
-            <div id="imagem">
-                <img id="totoroCentro" onclick="mostrarDialogo()" src="assets/imgs/totoro_folha.gif">
-            </div>
+  <div class="bannerOpen">
+    <div class="ContainerOpen" id="agregarBalao">
+      <div class="mostrarbalao" style="display: none;">
+        <div class="balao">
+          <p id="digitando"></p>
         </div>
+        <div id="botaoDirecionar" style="display: none;">
+          <img onclick="direcionarPagina()">Ir para a próxima página</button>
+        </div>
+      </div>
     </div>
-    
+  </div>
+
+  <img onclick="mostrarDialogo()" src="assets/imgs/totoro_folha.gif">
+
+  <script>
+    var clique = 0;
+    var listaEstrofes = [
+      `Olá, sou o Totoro! 🌿 Eu sou um espírito da floresta, um ser adorável e peludo que vive nas árvores e cuida da natureza. As crianças me veem quando estão brincando e explorando, nesses momentos sempre tento trazer alegria e magia aos seus corações.`,
+      `Hoje, quero compartilhar algo mágico com vocês: o Studio Ghibli!
+
+O Studio Ghibli é como um lar encantado de histórias extraordinárias. Criado pelo talentoso Hayao Miyazaki e seus amigos, este estúdio nos presenteou com mundos repletos de magia, criaturas fantásticas e personagens inesquecíveis.`,
+      `Cada filme é uma jornada única, uma experiência que toca os corações e alimenta a imaginação. De encontros com espíritos da natureza a voos inesquecíveis em aeronaves mágicas, o Studio Ghibli nos leva a lugares que só poderiam existir em sonhos.`,
+      `Então, da próxima vez que se aconchegar para assistir a uma obra-prima do Studio Ghibli, lembre-se: estamos todos juntos nessa aventura, explorando mundos de maravilha e descobrindo a magia que vive dentro de nós.
+
+Vamos voar juntos com o Studio Ghibli! 🌟`
+    ];
+    var speed = 30;
+
+    function mostrarDialogo() {
+      if (clique < listaEstrofes.length) {
+        document.getElementById("digitando").innerHTML = ""; // Limpa o conteúdo atual
+        document.querySelector('.mostrarbalao').style.display = 'block';
+        document.getElementById('botaoDirecionar').style.display = 'none';
+
+        escreverTexto(); // Chama a função para escrever o texto no balão
+      }
+    }
+
+    function escreverTexto() {
+      var elementoDigitando = document.getElementById("digitando");
+      var textoAtual = listaEstrofes[clique];
+      var i = 0;
+
+      function iterarTexto() {
+        if (i < textoAtual.length) {
+          elementoDigitando.innerHTML += textoAtual.charAt(i);
+          i++;
+          setTimeout(iterarTexto, speed);
+        } else {
+          // Incrementa a variável clique após o término da animação
+          clique++;
+
+          // Se for a última estrofe, exibe o botão de direcionar
+          if (clique === listaEstrofes.length) {
+            document.getElementById('botaoDirecionar').style.display = 'block';
+          }
+        }
+      }
+
+      iterarTexto();
+    }
+
+    function direcionarPagina() {
+      // Substitua 'pagina_destino.html' pelo URL da página para onde deseja direcionar
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
-<script>
-    // var clique = Number(totoroCentro.innerHTML);
-    function mostrarDialogo() {
-
-            // falaTotoro.innerHTML = '';
-
-        for(clique = 0; clique < 7; clique += 1){
-            if(clique == 0){
-                narracao.innerHTML = `<div id="mostrarFala" class="balao">
-                <div id="falaTotoro" class="fala_Totoro">
-                    <p>Olá, sou o Totoro!🌿
-                    Eu sou um espírito da floresta, um ser adorável
-                    e peludo que vive nas árvores e cuida da natureza. </p>
-                    </div>
-            </div>`;
-            }
-            // else if(clique == 2){
-            //     falaTotoro.innerHTML = `<p>mas ele também fez outros além de mim.</p>`;
-            // }
-            // else if(clique == 3){
-            //     falaTotoro.innerHTML = `<p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p>`;
-            // }
-    
-            // else if(clique == 4){
-            //     falaTotoro.innerHTML = `<p>Hola! Sou Totoro!<br>Fui criado por Hayao Miyazaki, mas ele também fez outros além de mim.</p>`;
-            // }
-    
-    
-        }
-
-    }
-</script>
