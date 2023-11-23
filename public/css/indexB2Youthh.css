@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  background-color: #61A9BF;
 }
 
 :root {
@@ -13,108 +13,42 @@ body {
   --tamanho-footer: 65px;
 }
 
-.container {
-  display: flex;
-  width: 80%;
-  margin: auto;
-}
+/* Inicío header */
 
-.header {
-  height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
-}
 
-.header .container {
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
 
-.header a {
-  text-decoration: none;
-  color: #e3b062;
-}
+/* Fim header */
 
-.agora {
-  font-weight: 800;
-}
+/* não mexer */
 
-.navbar {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  color: #e3b062;
-}
-
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
-}
-
-.header h1 {
-  margin: 0;
-}
-
-.banner {
-  height: var(--tamanho-banner);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+/* Inicío do corpo do site */
+.bannerIndex .ceu {
+  background-image: url('assets/imgs/fundoCeu.png');
   background-size: cover;
-}
-
-.banner .container {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.banner .container p {
-  font-size: 36px;
-  color: white;
-  width: 280px;
-}
-
-.banner .container span {
-  font-weight: 800;
-}
-
-.social {
-  background-color: #e5e5e5;
-  display: flex;
-}
-
-.social .container {
-  justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-  justify-content: space-between;
+  background-position: center;
   width: 100%;
 }
 
-.box {
-  width: 280px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.bannerIndex .sobreStudio {
+  background-image: url('public/assets/imgs/ceuPT2.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
-.box p {
-  text-align: center;
+.bannerIndex .Curiosidades {
+  background-image: url('assets/imgs/ceuPT3.png');
+  background-size: cover;
+  
+  width: 100%;
 }
+
+
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('./assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
 }
 
@@ -234,28 +168,13 @@ body {
   font-size: 20px;
 }
 
-.footer {
-  height: var(--tamanho-footer);
-  width: 100%;
-  background-color: #32b9cd;
-  color: #fff;
-}
+/* Fim do corpo do site */
 
-.footer h4 {
-  margin: 0;
-}
+/* Inicio do footer */
 
-.footer .container {
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-}
 
-.footer .container .version {
-  font-size: 12px;
-  font-weight: 800;
-}
+
+/* Final do footer */
 
 .simulador {
   color: white;

@@ -15,16 +15,16 @@
           <p id="digitando"></p>
         </div>
         <div id="botaoDirecionar" style="display: none;">
-          <img onclick="direcionarPagina()">Ir para a próxima página</button>
+          <button onclick="direcionarPagina()">Ir para a próxima página</button>
         </div>
       </div>
     </div>
   </div>
-
+  
   <img onclick="mostrarDialogo()" src="assets/imgs/totoro_folha.gif">
 
   <script>
-    var clique = 0;
+var clique = 0;
     var listaEstrofes = [
       `Olá, sou o Totoro! 🌿 Eu sou um espírito da floresta, um ser adorável e peludo que vive nas árvores e cuida da natureza. As crianças me veem quando estão brincando e explorando, nesses momentos sempre tento trazer alegria e magia aos seus corações.`,
       `Hoje, quero compartilhar algo mágico com vocês: o Studio Ghibli!
@@ -38,14 +38,20 @@ Vamos voar juntos com o Studio Ghibli! 🌟`
     var speed = 30;
 
     function mostrarDialogo() {
-      if (clique < listaEstrofes.length) {
-        document.getElementById("digitando").innerHTML = ""; // Limpa o conteúdo atual
-        document.querySelector('.mostrarbalao').style.display = 'block';
-        document.getElementById('botaoDirecionar').style.display = 'none';
+  if (clique < listaEstrofes.length) {
+    var elementoDigitando = document.getElementById("digitando");
 
-        escreverTexto(); // Chama a função para escrever o texto no balão
-      }
+    // Limpa o conteúdo anterior se não for o primeiro clique
+    if (clique > 0) {
+      elementoDigitando.innerHTML = "";
     }
+
+    document.querySelector('.mostrarbalao').style.display = 'block';
+    document.getElementById('botaoDirecionar').style.display = 'none';
+
+    escreverTexto();
+  }
+}
 
     function escreverTexto() {
       var elementoDigitando = document.getElementById("digitando");
@@ -54,14 +60,12 @@ Vamos voar juntos com o Studio Ghibli! 🌟`
 
       function iterarTexto() {
         if (i < textoAtual.length) {
-          elementoDigitando.innerHTML += textoAtual.charAt(i);
+          elementoDigitando.innerHTML += textoAtual[i];
           i++;
           setTimeout(iterarTexto, speed);
         } else {
-          // Incrementa a variável clique após o término da animação
           clique++;
 
-          // Se for a última estrofe, exibe o botão de direcionar
           if (clique === listaEstrofes.length) {
             document.getElementById('botaoDirecionar').style.display = 'block';
           }
@@ -72,9 +76,9 @@ Vamos voar juntos com o Studio Ghibli! 🌟`
     }
 
     function direcionarPagina() {
-      // Substitua 'pagina_destino.html' pelo URL da página para onde deseja direcionar
       window.location.href = 'index.html';
     }
-  </script>
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totoro Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    #totoro {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: totoroAnimation 5s infinite;
+    }
+
+    @keyframes totoroAnimation {
+      0%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="totoro" src="assets/imgs/totoro_folha.gif">
+    <!-- Aqui você pode adicionar a imagem do Totoro -->
+    <!-- <img src="caminho/para/totoro.png" alt="Totoro"> -->
+  </div>
+
+  <script>
+    // Você pode adicionar interações adicionais com JavaScript aqui, se necessário
+  </script>
+</body>
+</html>
