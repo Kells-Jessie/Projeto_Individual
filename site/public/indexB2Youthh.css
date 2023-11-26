@@ -1,9 +1,11 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #61A9BF;
+font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #61A9BF;
+justify-content: center;
+margin: 0;
 }
+
+/* Não mexer */
 
 :root {
   --tamanho-header: 80px;
@@ -13,40 +15,76 @@ body {
   --tamanho-footer: 65px;
 }
 
+/* Não mexer */
+
 /* Inicío header */
+.header{
+  display: flex;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.header .headerContainer{
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  
+}
 
 
+.header .headerContainer .direcionadores{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+}
 
 /* Fim header */
 
-/* não mexer */
 
 /* Inicío do corpo do site */
-.bannerIndex .ceu {
+
+.bannerIndex{
   background-image: url('assets/imgs/fundoCeu.png');
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-size:contain;
   background-position: center;
-  width: 100%;
+  height: 130vh;
+  width: 98vw;
+  background-repeat: no-repeat;
+}
+
+.bannerIndex .containerIndex .ceu #totoroHome{
+  width: 2800px;
+  height: 2000px;
 }
 
 
-.bannerIndex .sobreStudio {
-  background-image: url('public/assets/imgs/ceuPT2.png');
-  background-size: cover;
+.sobreStudio{
+  background-image: url('assets/imgs/ceuPT2.png');
+  background-size:contain;
+  background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
+  height:130vh;
+  width:98vw;
 }
 
-.bannerIndex .Curiosidades {
+.curiosidade{
   background-image: url('assets/imgs/ceuPT3.png');
-  background-size: cover;
-  
-  width: 100%;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height:130vh;
+  width:98vw;
 }
 
 
 
-.login {
+
+/* .login {
   height: var(--tamanho-login);
   background-image: url('./assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
@@ -166,7 +204,7 @@ body {
 .card_erro #mensagem_erro{
   font-weight: 500;
   font-size: 20px;
-}
+} */
 
 /* Fim do corpo do site */
 
@@ -176,7 +214,7 @@ body {
 
 /* Final do footer */
 
-.simulador {
+/* .simulador {
   color: white;
 }
 
@@ -184,4 +222,4 @@ body {
   flex-direction: column;
   overflow: scroll; 
   height: var(--tamanho-simulador);
-}
+} */
