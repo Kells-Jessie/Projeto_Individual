@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <scrip src="js/quiz.js"></scrip>
+    <link rel="stylesheet" href="./css/quiz.css"/>
 </head>
 
 <body>
-    <div id="quiz" class="Quiz">
-        <h2>Ajude o calicifer!</h2>
-        <button id="iniciar" onclick="comecarJogo()">Iniciar</button>
-    </div>
-    <div id="mostrarQuiz" class="bannerQuiz">
-        <div id="containerQuiz" class="containerQuiz">
-            <div class="perguntas"></div>
-            <div id="respostas" class="respostas">
-                <button></button><button></button>
-                <button></button><button></button>
+    <div class="bannerJogo">
+        <div id="quiz" class="Quiz">
+            <h2 id="titulo">Ajude o calicifer!</h2>
+            <button id="iniciar" onclick="comecarJogo()">Iniciar</button>
+        </div>
+        <div id="mostrarQuiz" class="bannerQuiz">
+            <div id="containerQuiz" class="containerQuiz">
+                <div class="perguntas" style="display:none"></div>
+                <div id="respostas" class="respostas" style="display:none;">;
+                    <button></button><button></button>
+                    <button></button><button></button>
+                </div>
             </div>
         </div>
     </div>
@@ -26,22 +28,6 @@
 
 </html>
 <script>
-    var listaPerguntas = [
-        "Qual é o primeiro filme produzido pelo Studio Ghibli?",
-        "Quem é o fundador do Studio Ghibli?",
-        "De que filme eu sou? Meu nome é calicifer",
-        'Em "O Castelo Animado", qual é a maldição que atinge o protagonista, Howl?',
-        "Qual filme do Studio Ghibli explora a relação entre humanos e deuses da floresta?",
-        'Quem é o diretor de "O Conto da Princesa Kaguya" (2013)?',
-        "Qual filme do Studio Ghibli apresenta a personagem Marnie?",
-        'Em "Túmulo dos Vagalumes" (1988), qual é o relacionamento entre Seita e Setsuko?',
-        'Qual é o tema principal de "Porco Rosso" (1992)?',
-        'Quem é a protagonista de "Whisper of the Heart" (1995)?',
-    ];
-
-    // var listaRespostasCertas = ['Nausicaä do Vale do Vento - (1984)','Hayao Miyazaki e Isao Takahata.','O castelo Animado',
-    // 'Ele se transforma em um pássaro humano','Princesa Mononoke - (1997)','Isao Takahata','When Marnie Was There','Irmãos',
-    // 'A aviação e a busca pela paz','Shizuku Tsukishima'];
 
     var listaQuestoes = [
 
@@ -132,17 +118,18 @@
 
     function comecarJogo() {
         transformarBotao.innerHTML = `Próxima questão`;
+        document.getElementById('titulo').style.display = 'none';
 
         posicao += 1;
         if (clique < listaQuestoes.length) {
-            containerQuiz.innerHTML = listaQuestoes[posicao -1];
+            containerQuiz.innerHTML = listaQuestoes[posicao - 1];
         }
 
         clique += 1;
 
         if (posicao > listaQuestoes.length) {
-        containerQuiz.innerHTML = `Você fez ${Total} pontos de ${listaQuestoes.length} <button onclick="sair()">Voltar ao perfil</button>`;
-    }
+            containerQuiz.innerHTML = `Você fez ${Total} pontos de ${listaQuestoes.length} <button onclick="sair()">Voltar ao perfil</button>`;
+        }
 
     }
 
@@ -169,7 +156,7 @@
                 // Agora vá para o arquivo routes/usuario.js
                 idUsuarioServer: sessionStorage.ID_USUARIO,
                 qtdAcertosServer: Total
-                
+
             }),
         })
             .then(function (resposta) {

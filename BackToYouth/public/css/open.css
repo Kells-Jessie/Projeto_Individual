@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* *, *:before, *:after {
@@ -20,48 +21,46 @@ body {
   background-color: #000000;
 }
 
-.bannerOpen{
-    height: 750px;
-    width: 100%;
-    display: flex;
-    background-image: url('../assets/imgs/backgroundRain.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.bannerOpen {
+  height: 750px;
+  width: 100%;
+  display: flex;
+  background-image: url("../assets/imgs/backgroundRain.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.bannerOpen #agregarBalao{
-    height: 700;
-    flex-direction: row;
-    display: flex;
-    padding-left: 35%;
+.bannerOpen #agregarBalao {
+  height: 700;
+  flex-direction: row;
+  display: flex;
+  padding-left: 35%;
 }
 
-.bannerOpen #agregarBalao .mostrarbalao{
-    display: flex;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.bannerOpen #agregarBalao .mostrarbalao {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-.bannerOpen #agregarBalao .mostrarbalao button{
-    padding-top: 3%;;
-    background-color: #000000;
-    color: #fff;
-    border: 1px #fff;
-    border-radius: 10px;
-    width: 150px;  
-    height: 40px;
-    cursor:pointer;
+.bannerOpen #agregarBalao .mostrarbalao button {
+  padding-top: 3%;
+  background-color: #000000;
+  color: #fff;
+  border: 1px #fff;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
 }
-.bannerOpen #agregarBalao .imagem{
-    display: flex;
-    align-self: center;
-    cursor: pointer;
+.bannerOpen #agregarBalao .imagem {
+  display: flex;
+  align-self: center;
+  cursor: pointer;
 }
-
 
 .balao {
   position: relative;

@@ -1,0 +1,69 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    height: 100vh;
+  }
+
+body{
+    height:700;
+    padding: 0 0 0 0;
+    background-image: url('../assets/imgs/backgroundCali.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bannerJogo{
+    
+    height: 700;
+    width: 100%;
+    display: flex;
+    padding: 0 0 0 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerJogo #quiz{
+    padding-top: 20%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-shadow: -20px 20px 60px #353835, 20px -20px 60px #888b88;
+}
+
+h2{
+    color:#fff;
+    font-size: 70px;
+    align-self: center;
+}
+
+#iniciar{
+    width: 400px;
+    border-radius: 40px;
+    height: 40px;
+    align-self: center;
+
+}
+
+.perguntas{
+    display: flex;
+    color: #fff;
+    padding-top: 20%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-shadow: -20px 20px 60px #353835, 20px -20px 60px #888b88;
+    font-size: 40px;
+}
+
+.perguntas button{
+    width: 400px;
+    border-radius: 40px;
+    height: 40px;
+    align-self: center;
+
+}

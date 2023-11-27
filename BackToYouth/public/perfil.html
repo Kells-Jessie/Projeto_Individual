@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="icon" href="./assets/icon/calicifer_logo.gif">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="./css/perfil.css"/>
+    <link rel="stylesheet" href="./css/perfil.css" />
 </head>
+
 <body>
-    <div class="headerUsuario">
-        <div class="header_container">
-          <ul>
-            <li><a class="direcionador" href="catalogo.html">Catalogo</a></li>
-            <li><a class="direcionador" href="personagens.html">Personagens</a></li>
-            <li><a class="direcionador" href="saladeestudo.html">Sala de estudo</a></li>
-            <li><a class="direcionador" href="cadastro.html">Cadastro</a></li>
-            <li><a class="direcionador" href="login.html">Entre</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="janela">
-        <div class="header-left">
-            <h1>Back To Youth</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./quiz.html">
-                    <h3>Quiz</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
-        </div>
-
-        <div class="dash">
-            <div id="alerta">
-            </div>
-
-            <div class="btns-dash" id="btnAquario">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-            </div>
-            <div id="graficos">
+    <div class="janela">
+        <div class="headerLateral">
+            <div class="boxLateral">
+                <h1>Back To Youth</h1>
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
+                <div class="box">
+                    <a href="./quiz.html">
+                        <h3>Quiz</h3>
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="index.html">
+                    <h3>Home</h3>
+                    </a>
+                </div>
+                <div class="btn-logout">
+                    <button onclick="limparSessao()">
+                        <h3>Sair</h3>
+                    </button>
+                </div>
+                <!-- <div class="fantasminha">
+                    <img src="./assets/imgs/fanyasminha.gif">
+                </div>  -->
             </div>
         </div>
-    </div>
+
+            <div class="container">
+                <div class="mostrar" id="mostrarConteudo">
+                    <p>Desfrute de uma sugestão especial do Studio Ghibli a cada dia da semana! Ao pressionar o botão
+                        abaixo,
+                        você será presenteado com a recomendação de um filme diferente para cada dia. De segunda a
+                        domingo,
+                        mergulhe em mundos mágicos e histórias encantadoras que só o Studio Ghibli pode oferecer.
+                        Uma maneira única e divertida de tornar cada dia da semana mais cativante e cinematograficamente
+                        inspirador.</p>
+                    <button onclick="filmeAleatorio()">Embaralhar</button>
+                </div>
+                <div class="boxFilmes">
+                <div id="listaFilme" class="filmes"></div>
+            </div>
+            </div>
 </body>
+
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var listaFilmes = ["./assets/imgs/NausicaâFilme.webp",
+    "./assets/imgs/1986-O-Castelo-no-Céu.webp",
+    "./assets/imgs/1988-Meu-Amigo-Totoro.webp",
+    "./assets/imgs/Túmulo-dos-Vagalumes.webp",
+    "./assets/imgs/1989-O-Serviço-de-Entregas-da-Kiki.webp",
+    "./assets/imgs/Memórias-de-Ontem.webp",
+    "./assets/imgs/1992-Porco-Rosso.webp",
+    "./assets/imgs/Eu-Posso-Ouvir-o-Oceano.webp",
+    "./assets/imgs/Pom-Poko.webp",
+    "./assets/imgs/Sussurros-do-Coração.webp",
+    "./assets/imgs/1997-Princesa-Mononoke.webp",
+    "./assets/imgs/Meus-Vizinhos-os-Yamadas-1.webp",
+    "./assets/imgs/2001-A-Viagem-de-Chihiro.webp",
+    "./assets/imgs/O-Reino-dos-Gatos.webp",
+    "./assets/imgs/Contos-de-Terramar.webp",
+    "./assets/imgs/2008-Ponyo.webp",
+    "./assets/imgs/O-Mundo-dos-Pequeninos.webp",
+    "./assets/imgs/Da-Colina-Kokuriko.webp",
+    "./assets/imgs/2013-Vidas-ao-Vento.webp",
+    "./assets/imgs/O-Conto-da-Princesa-kaguya.webp",
+    "./assets/imgs/As-Memórias-de-Marnie.webp",
+    "./assets/imgs/Aya-e-a-Bruxa-Ghibli-filme.webp",
+    "./assets/imgs/Como-Vocês-Vivem.webp"]; 
+
+    var listaDias = ['Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sabado','Domingo']
+
+    function filmeAleatorio(){
+        var diasSemana = 7;
+
+
+        listaFilme.innerHTML = '';
+        for(var filme = 0; filme < diasSemana; filme +=1){
+            var randomizar = parseInt(Math.random() * listaFilmes.length);
+
+            listaFilme.innerHTML += `<div class="card"><h2>${listaDias[filme]}</h2><br>
+            <img src=${listaFilmes[randomizar]} style="width:150px"></div>`;
+        }
+
+    }
 </script>

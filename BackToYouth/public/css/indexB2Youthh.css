@@ -8,9 +8,13 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #0D4373;
+  background-color: #0d4373;
   border-radius: 40px;
   /* border: 3px solid rgba(255, 255, 255); */
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 html {
@@ -18,31 +22,31 @@ html {
 }
 
 body {
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-background-color: #61A9BF;
-justify-content: center;
-margin: 0;
-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #61a9bf;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
 }
 
-
-.header{
-  background-image: linear-gradient(rgb(13, 67, 115), #61A9BF);
+.header {
+  background-image: linear-gradient(rgb(13, 67, 115), #61a9bf);
 }
 
 /* Inicío do corpo do site */
 
-.bannerIndex{
-  background-image: url('../assets/imgs/PT1.png');
+.bannerIndex {
+  background-image: url("../assets/imgs/PT1.png");
   display: flex;
   justify-content: center;
-  background-size:contain;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 788px;
 }
 
-#totoroHome{
+#totoroHome {
   width: 800px;
   height: 600px;
   display: inline-block;
@@ -51,27 +55,25 @@ height: 100vh;
   animation-duration: 2s; */
 }
 
-#totoroHome:hover{
+#totoroHome:hover {
   transform: scale(1.1);
   transition: 0.6s ease-in-out;
 }
 
-
-.sobreStudio{
-  background-size:contain;
+.sobreStudio {
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 3512px;
 }
 
-.sobreStudio .containerStudio{
-  display:flex;
+.sobreStudio .containerStudio {
+  display: flex;
   flex-direction: column;
-
 }
 
-.sobreStudio .containerStudio #sobreInfo{
-  background-image:url('../assets/imgs/sobreStudio.png');
+.sobreStudio .containerStudio #sobreInfo {
+  background-image: url("../assets/imgs/sobreStudio.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,7 +84,7 @@ height: 100vh;
   height: 788px;
 }
 
-.sobreStudio .containerStudio #sobreInfo p{
+.sobreStudio .containerStudio #sobreInfo p {
   text-align: justify;
   padding-left: 50%;
   padding-bottom: 25%;
@@ -91,48 +93,43 @@ height: 100vh;
   height: 100px;
 }
 
-.sobreStudio .containerStudio #sobreInfo p b{
-  color: #326D39;
+.sobreStudio .containerStudio #sobreInfo p b {
+  color: #326d39;
 }
 
-
-.sobreStudio .containerStudio .paragrafo p{
+.sobreStudio .containerStudio .paragrafo p {
   text-align: justify;
   padding-right: 3%;
   padding-left: 3%;
   font-size: 30px;
 }
-  
 
-.sobreStudio img{
+.sobreStudio img {
   width: 600px;
   /* float: right; */
 }
 
-.curiosidade{
-  background-image: url('../assets/imgs/PT3.png');
+.curiosidade {
+  background-image: url("../assets/imgs/PT3.png");
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   background-position: center;
   height: 788px;
 }
 
-
 /* Animações da index */
-@keyframes pulsante{
+@keyframes pulsante {
   0% {
     transform: scale(1);
   }
 
-  50%{
+  50% {
     transform: scale(1.2);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
-
-
 
 /* .login {
   height: var(--tamanho-login);
@@ -259,8 +256,6 @@ height: 100vh;
 /* Fim do corpo do site */
 
 /* Inicio do footer */
-
-
 
 /* Final do footer */
 
