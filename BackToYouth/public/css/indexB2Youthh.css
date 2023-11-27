@@ -1,0 +1,275 @@
+*::-webkit-scrollbar {
+  width: 10px;
+  /* border: 3px solid rgba(255, 255, 255, 0.91); */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0D4373;
+  border-radius: 40px;
+  /* border: 3px solid rgba(255, 255, 255); */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: #61A9BF;
+justify-content: center;
+margin: 0;
+height: 100vh;
+}
+
+
+.header{
+  background-image: linear-gradient(rgb(13, 67, 115), #61A9BF);
+}
+
+/* Inicío do corpo do site */
+
+.bannerIndex{
+  background-image: url('../assets/imgs/PT1.png');
+  display: flex;
+  justify-content: center;
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 788px;
+}
+
+#totoroHome{
+  width: 800px;
+  height: 600px;
+  display: inline-block;
+  margin: 0 0.5rem;
+  /* animation: pulsante 2s;
+  animation-duration: 2s; */
+}
+
+#totoroHome:hover{
+  transform: scale(1.1);
+  transition: 0.6s ease-in-out;
+}
+
+
+.sobreStudio{
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 3512px;
+}
+
+.sobreStudio .containerStudio{
+  display:flex;
+  flex-direction: column;
+
+}
+
+.sobreStudio .containerStudio #sobreInfo{
+  background-image:url('../assets/imgs/sobreStudio.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 788px;
+}
+
+.sobreStudio .containerStudio #sobreInfo p{
+  text-align: justify;
+  padding-left: 50%;
+  padding-bottom: 25%;
+  font-size: 30px;
+  width: 550px;
+  height: 100px;
+}
+
+.sobreStudio .containerStudio #sobreInfo p b{
+  color: #326D39;
+}
+
+
+.sobreStudio .containerStudio .paragrafo p{
+  text-align: justify;
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 30px;
+}
+  
+
+.sobreStudio img{
+  width: 600px;
+  /* float: right; */
+}
+
+.curiosidade{
+  background-image: url('../assets/imgs/PT3.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 788px;
+}
+
+
+/* Animações da index */
+@keyframes pulsante{
+  0% {
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+
+/* .login {
+  height: var(--tamanho-login);
+  background-image: url('./assets/imgs/bg-jelly-fish-para-home.png');
+  background-size: cover;
+}
+
+.login .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 30%;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: palevioletred;
+  row-gap: 20px;
+}
+
+.card-cadastro {
+  height: 80%;
+}
+
+.card-login {
+  height: 60%;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.formulario {
+  display: flex;
+  height: 90%;
+  width: 80%;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.formulario span {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.formulario input {
+  border: 2px solid #32b9cd;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.formulario select {
+  border: 2px solid #32b9cd;
+  background-color: white;
+  color: gray;
+  height: 36px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.botao {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background-color: #e6005a;
+  width: 120px;
+  height: 30px;
+  align-self: center;
+}
+
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: #e6005a 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+} */
+
+/* Fim do corpo do site */
+
+/* Inicio do footer */
+
+
+
+/* Final do footer */
+
+/* .simulador {
+  color: white;
+}
+
+.simulador .container {
+  flex-direction: column;
+  overflow: scroll; 
+  height: var(--tamanho-simulador);
+} */

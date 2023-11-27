@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="icon" href="assets/icon/calicifer_logo.gif">
+  <link rel="stylesheet" href="./css/open.css" />
+</head>
+
+<body>
+  <div class="bannerOpen">
+    <div class="ContainerOpen" id="agregarBalao">
+      <div class="mostrarbalao" style="display: none;">
+        <div class="balao">
+          <p id="digitando"></p>
+        </div>
+        <div id="botaoDirecionar" style="display: none;">
+          <button onclick="direcionarPagina()">Explorar</button>
+        </div>
+      </div>
+      <div class="imagem">
+        <img onclick="mostrarDialogo()" src="assets/imgs/totoro_folha.gif">
+      </div class=>
+    </div>
+  </div>
+
+  <script>
+    var clique = 0;
+    var listaEstrofes = [
+      `Olá, sou o Totoro! 🌿 Eu sou um espírito da floresta, um ser adorável e peludo que vive nas árvores e cuida da natureza. 
+      As crianças me veem quando estão brincando e explorando, nesses momentos sempre tento trazer alegria e magia aos seus corações.`,
+
+      `Hoje, quero compartilhar algo mágico com vocês: o Studio Ghibli!
+       O Studio Ghibli é como um lar encantado de histórias extraordinárias. Criado pelo talentoso Hayao Miyazaki e seus amigos, este 
+       estúdio nos presenteou com mundos repletos de magia, criaturas fantásticas e personagens inesquecíveis.`,
+
+      `Então, da próxima vez que se aconchegar para assistir a uma obra-prima do Studio Ghibli, lembre-se: estamos todos juntos nessa aventura,
+       explorando mundos de maravilha e descobrindo a magia que vive dentro de nós. Vamos voar juntos com o Studio Ghibli! 🌟`
+    ];
+
+    var speed = 20;
+
+    function mostrarDialogo() {
+      if (clique < listaEstrofes.length) {
+        var elementoDigitando = document.getElementById("digitando");
+
+        // Limpa o conteúdo anterior se não for o primeiro clique
+        if (clique > 0) {
+          elementoDigitando.innerHTML = "";
+        }
+
+        document.querySelector('.mostrarbalao').style.display = 'flex';
+        document.getElementById('botaoDirecionar').style.display = 'none';
+
+        escreverTexto();
+      }
+    }
+
+    function escreverTexto() {
+      var elementoDigitando = document.getElementById("digitando");
+      var textoAtual = listaEstrofes[clique];
+      var i = 0;
+
+      function iterarTexto() {
+        if (i < textoAtual.length) {
+          elementoDigitando.innerHTML += textoAtual[i];
+          i++;
+          setTimeout(iterarTexto, speed);
+        } else {
+          clique++;
+
+          if (clique === listaEstrofes.length) {
+            document.getElementById('botaoDirecionar').style.display = 'block';
+          }
+        }
+      }
+
+      iterarTexto();
+    }
+
+    function direcionarPagina() {
+      window.location.href = 'cadastro.html';
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+/* Inicío header */
+.header {
+    display: flex;
+    padding-right: 3%;
+    padding-bottom: 20px;
+    padding-left: 3%;
+    padding-top: 20px;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .header_container {
+    width: 70%;
+  }
+  
+  #logoHeader{
+    width: 140px;
+  }
+   
+  
+  .header .header_container ul {
+    display: flex;
+    padding: 0 0 0 0;
+    list-style: none;
+    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  ul li a:hover{
+    color:#fff;
+    transition: 0.6s ease;
+  }
+  
+  a.direcionador{
+    text-decoration: none;
+    font-size: 25px;
+    color: #0D4373;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  
+  /* Fim header */

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Home</title>
+
+  <script src="./js/sessao.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="./assets/icon/calicifer_logo.gif">
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/indexB2Youthh.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+  <!-- Inicio da header -->
+
+  <div class="header">
+    <a href="index.html"><img id="logoHeader" src="./assets/icon/logoHeader.gif"></a>
+    <div class="header_container">
+      <ul>
+        <li><a class="direcionador" href="catalogo.html">Catalogo</a></li>
+        <li><a class="direcionador" href="personagens.html">Personagens</a></li>
+        <li><a class="direcionador" href="saladeestudo.html">Sala de estudo</a></li>
+        <li><a class="direcionador" href="cadastro.html">Cadastro</a></li>
+        <li><a class="direcionador" href="login.html">Entre</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Fim da header -->
+
+  <!-- Banner completo -->
+
+  <!-- Inicio do banner página ínicial -->
+
+  <div class="bannerIndex">
+    <div class="containerIndex">
+      <div class="ceu">
+        <img id="totoroHome" src="assets/imgs/totoroHome.png">
+      </div>
+      <div class="">
+      </div>
+      <div class="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Fim do banner página ínicial -->
+
+  <!-- Inicio sobre o studio -->
+
+  <div class="sobreStudio">
+    <div class="containerStudio">
+      <div id="sobreInfo">
+        <p>Bem-vindo ao mundo encantado do <b>Back to Youth!</b> Uma casa de magia e imaginação de volta as memóris da
+          infâncias daqueles que cresceram assistindo o universo cinematográfico do <b>Studio Ghibli</b> onde suas
+          obras-primas animadas que transcendem fronteiras culturais e cativaram corações em todo o mundo.</p>
+        <img src="">
+      </div>
+      <div class="paragrafo">
+        <p>`Cada filme é uma jornada única, uma experiência que toca os corações e alimenta a imaginação. De encontros
+          com espíritos da natureza a
+          voos inesquecíveis em aeronaves mágicas, o Studio Ghibli nos leva a lugares que só poderiam existir em
+          sonhos.`</p>
+        <p>Desde o majestoso voo de "Meu Amigo Totoro" até as aventuras fantásticas de "A Viagem de Chihiro", cada filme
+          é uma obra-prima visual e narrativa. A atenção aos detalhes, a qualidade das animações à mão e as trilhas
+          sonoras envolventes transportam o espectador para mundos mágicos cheios de criaturas fascinantes e paisagens
+          deslumbrantes.</p>
+        <p>Proporcionando uma experiência que transcende gerações. As mensagens atemporais e a arte deslumbrante
+          continuam a inspirar, educar e nutrir a imaginação de crianças e adultos. Ao explorar temas profundos com um
+          toque de fantasia, o Studio Ghibli convida todos a redescobrirem a maravilha que reside na simplicidade e na
+          complexidade da vida.</p>
+      </div>
+      <div class="paragrafo">
+        <p>Bem-vindo ao mundo encantado do Studio Ghibli, uma casa de magia e imaginação cinematográfica. Fundado no
+          Japão por Hayao Miyazaki e Isao Takahata, é renomado por suas obras-primas animadas que transcenderam
+          fronteiras culturais e cativaram corações em todo o mundo.</p>
+        <p>Desde o majestoso voo de "Meu Amigo Totoro" até as aventuras fantásticas de "A Viagem de Chihiro", cada filme
+          é uma obra-prima visual e narrativa. A atenção aos detalhes, a qualidade das animações à mão e as trilhas
+          sonoras envolventes transportam o espectador para mundos mágicos cheios de criaturas fascinantes e paisagens
+          deslumbrantes.</p>
+        <p>Proporcionando uma experiência que transcende gerações. As mensagens atemporais e a arte deslumbrante
+          continuam a inspirar, educar e nutrir a imaginação de crianças e adultos. Ao explorar temas profundos com um
+          toque de fantasia, o Studio Ghibli convida todos a redescobrirem a maravilha que reside na simplicidade e na
+          complexidade da vida.</p>
+        <img src="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Final sobre o studio -->
+  <div class="sobreMim">
+    <div class="conteainerEu">
+      <div>
+        alguma coisa
+      </div>
+      <div>
+        alguma coisa
+      </div>
+      <div>
+        açguma coisa
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicio analytics -->
+
+  <div class="analytics">
+    <div class="containeranalytics">
+      <div class="dash">
+        <div id="alerta">
+        </div>
+        <div class="btns-dash" id="btnDados">
+          <button onclick="obterDadosGrafico()">Mostrar</button>
+        </div>
+        <div id="graficos">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final analytics -->
+
+  <!-- final Banner completo -->
+
+  <!-- Inicio do footer -->
+
+  <div class="footer">
+    <div class="container">
+      <h4>Sem medo de explorar &hearts; Kells &copy; 2023</h4>
+      <span class="version">v1.0.0</span>
+    </div>
+  </div>
+
+  <!-- final do footer -->
+</body>
+
+</html>
+<script>
+  // O gráfico é construído com três funções:
+  // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+  // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+  // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
+
+  // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+  // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+  // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+
+  //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+  //     Para ajustar o "select", ajuste o comando sql em src/models
+  function obterDadosGrafico() {
+
+    document.getElementById("graficos").innerHTML += `
+                <div id="grafico" class="display-none">
+                    <h3 class="tituloGraficos">
+                        <span id="nomeGrafico">Media da idade do público</span>
+                    </h3>
+                    <div class="graph">
+                        <canvas id="myChartCanvas"></canvas>
+                    </div>
+                    <div class="label-captura">
+                        <p id="avisoCaptura" style="color: white"></p>
+                    </div>
+                </div>
+            `
+
+    fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          resposta.reverse();
+
+          plotarGrafico(resposta);
+
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+  }
+
+  // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+  // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+  // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+  function plotarGrafico(resposta) {
+
+    console.log('iniciando plotagem do gráfico...');
+
+    // Criando estrutura para plotar gráfico - labels
+    let labels = [];
+
+    // Criando estrutura para plotar gráfico - dados
+    let dados = {
+      labels: labels,
+      datasets: [{
+        label: 'idade',
+        data: [],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ],
+      },
+      ]
+    };
+
+    console.log('----------------------------------------------')
+    console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+    console.log(resposta)
+
+    // Inserindo valores recebidos em estrutura para plotar o gráfico
+    for (i = 0; i < resposta.length; i++) {
+      var registro = resposta[i];
+      labels.push(registro.momento_grafico);
+      dados.datasets[0].data.push(registro.idade);
+    }
+
+    console.log('----------------------------------------------')
+    console.log('O gráfico será plotado com os respectivos valores:')
+    console.log('Labels:')
+    console.log(labels)
+    console.log('Dados:')
+    console.log(dados.datasets)
+    console.log('----------------------------------------------')
+
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+      type: 'line',
+      data: dados,
+    };
+
+    // Adicionando gráfico criado em div na tela
+    let myChart = new Chart(
+      document.getElementById(`myChartCanvas`),
+      config
+    );
+
+  }
+</script>

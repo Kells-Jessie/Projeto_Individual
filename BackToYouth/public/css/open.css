@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
+body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #000000;
+}
+
+.bannerOpen{
+    height: 750px;
+    width: 100%;
+    display: flex;
+    background-image: url('../assets/imgs/backgroundRain.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bannerOpen #agregarBalao{
+    height: 700;
+    flex-direction: row;
+    display: flex;
+    padding-left: 35%;
+}
+
+.bannerOpen #agregarBalao .mostrarbalao{
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.bannerOpen #agregarBalao .mostrarbalao button{
+    padding-top: 3%;;
+    background-color: #000000;
+    color: #fff;
+    border: 1px #fff;
+    border-radius: 10px;
+    width: 150px;  
+    height: 40px;
+    cursor:pointer;
+}
+.bannerOpen #agregarBalao .imagem{
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+.balao {
+  position: relative;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.balao::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #000 transparent;
+}
+
+#digitando {
+  color: #fff;
+  border: 2px solid #fff; /* Adicionamos a borda diretamente aqui */
+  display: inline-block; /* Certifica-se de que a borda envolve o conteúdo */
+  padding: 10px; /* Adicionamos um preenchimento para separar a borda do conteúdo */
+  border-radius: 5px; /* Borda arredondada para combinar com o balão */
+  text-align: justify;
+}
+
+/* .Banner{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    height: 40vw;
+    width: 95vw;
+}
+
+.banner #demo p{
+    font-style: aliceblue;
+}
+
+.Banner .ContainerOpen{
+    padding: 1%;
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center; 
+    height: 38vw;
+    width: 93vw;
+}
+
+.Banner .ContainerOpen .narracao{
+    display:flex;
+    height: 35vw;
+    width: 30vw;
+    justify-content: flex-end;
+}
+
+.Banner .ContainerOpen .imagem{
+    display: flex;
+    align-self: center;
+    height: 35vw;
+    width: 50vw;
+} */
+
+/* Inicio de estilização do Balão de fala*/
+
+/* .Banner .ContainerOpen .narracao .balao{
+    padding:2%;
+    border: 1px solid white;
+    border-radius: 24px;
+    border-bottom-right-radius: 0px;
+    position:relative;
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+} */
+
+/* .Banner .ContainerOpen .narracao .balao::after{
+
+    content:'';
+    position: absolute;
+    border: 2px solid;
+    background-color: inherit;
+    right: 0;
+    top:100%;
+    width: 20px;
+    height: auto;
+    clip-path: polygon(0 100%,100% 0, 100% 100%);
+    /* border-color: transparent white white transparent;
+    transform: rotate(45deg);
+    left: 70%;
+    top: 85%; */
+
+/* } */
+
+/* .Banner .ContainerOpen .narracao .balao .fala_Totoro{
+    display: inline-block;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1%;
+    /* height: 20%;*/
+/* width: 80%; */
+/* overflow: hidden; */
+/* top: 0px; */
+/* position: relative; */
+/* animation: digitando 3s steps(20); */
+/* } */
+
+/* fim da estilização do balão de fala */
+
+/* Inicio Animação digitando */
+
+/* .Banner .ContainerOpen .narracao .balao .fala_Totoro p{
+    display:block;
+    color:white;
+    text-align: justify; 
+    width: 100%;
+    height: 30%;
+    font-size: 1.2em;
+    line-height: 2em;
+    margin: none;
+    text-indent: 2em;
+} */
+
+/* .Banner .ContainerOpen .narracao .balao .fala_Totoro p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* height: -6em; */
+/* width: 100%; */
+/* animation: digitando 3s steps(25); */
+/* white-space: pre-rap; */
+/* overflow: hidden; */
+/* text-overflow: ellipsis; */
+/* border-right: 1px solid; */
+/* }  */
+
+/* @keyframes revelando {
+        0% {left: 0%; }
+        100% {left: 100%; }
+    } */
+
+/* @keyframes digitando {
+    0% {
+        right: 0;
+        height: 0em;}
+    100% {
+        right: -20em;
+        height: 0em;
+    }
+
+} */
+/* 0% {right: 100%;}
+    0% {top:100%}
+    100% {bottom:100%}
+    100% {right: 0%; } */
+
+/* @keyframes blink{
+    40%{
+        border-color: rgb(26, 5, 5);
+    }
+} */
+
+/* Fim Animação digitando */
+
+/* img {
+    width: 350px;
+    height: 350px;
+} */

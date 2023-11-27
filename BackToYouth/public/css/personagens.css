@@ -1,0 +1,75 @@
+*::-webkit-scrollbar {
+    width: 10px;
+    /* border: 3px solid rgba(255, 255, 255, 0.91); */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background-color: 3px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #0D4373;
+    border-radius: 40px;
+    /* border: 3px solid rgba(255, 255, 255); */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #fff;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  }
+
+.bannerPersonagens{
+    height: 2364px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.bannerPersonagens .containerPersonagens{
+    background-image: url("../assets/imgs/fundoPersonagens.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    width:100%;
+}
+
+.bannerPersonagens .containerPersonagens .cards{
+    display: flex;
+    width: 788;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.bannerPersonagens .containerPersonagens .cards .card{
+    border-radius: 30px;
+    border-color: black;
+    height: 350px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 2%;
+    padding-bottom: 80px;
+    /* background-color: beige; */
+
+}
+
+.bannerPersonagens .containerPersonagens .cards .card img{
+height: 200px;
+width: 150px;
+}
+
+.bannerPersonagens .containerPersonagens .cards .card p{
+    text-align: justify;
+    width: 300px;
+    height: 80px;
+}
