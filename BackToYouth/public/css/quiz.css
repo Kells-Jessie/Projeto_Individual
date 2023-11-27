@@ -16,7 +16,7 @@ body{
 }
 
 .bannerJogo{
-    
+    color: #fff;
     height: 700;
     width: 100%;
     display: flex;
@@ -31,6 +31,14 @@ body{
     display: flex;
     flex-direction: column;
     align-self: center; 
+}
+
+.bannerJogo #quiz button{
+    width: 400px;
+    border-radius: 40px;
+    height: 40px;
+    align-self: center;
+
 }
 
 h2{

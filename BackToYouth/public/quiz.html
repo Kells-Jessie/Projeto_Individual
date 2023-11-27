@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="bannerJogo">
+    <div class="bannerJogo" id="space">
         <div id="quiz" class="Quiz">
             <h2 id="titulo">Ajude o calicifer!</h2>
             <button id="iniciar" onclick="comecarJogo()">Iniciar</button>
@@ -128,6 +128,7 @@
         clique += 1;
 
         if (posicao > listaQuestoes.length) {
+            space.style.flexDirection = "column";
             containerQuiz.innerHTML = `Você fez ${Total} pontos de ${listaQuestoes.length} <button onclick="sair()">Voltar ao perfil</button>`;
         }
 
